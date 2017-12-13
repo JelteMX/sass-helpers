@@ -64,3 +64,28 @@
         @include pull-right;
     }
 }
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin box-shadow($vars, $inset: false) {
+    @if $inset {
+        @include prefix('box-shadow', inset $vars, webkit moz);
+    } @else {
+        @include prefix('box-shadow', $vars, webkit moz);
+    }
+}
+
+@mixin box-sizing($box-model) {
+    @include prefix('box-sizing', $radius, webkit moz);
+    box-sizing: $box-model;
+}
+
+@mixin border-radius($radius) {
+    @include prefix('border-radius', $radius);
+    background-clip: padding-box;
+    // stops bg color from leaking outside the border
+}
