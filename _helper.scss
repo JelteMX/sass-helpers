@@ -6,11 +6,15 @@
 //    Release URL: {{{ url }}}
 //
 
+@import 'helpers/variables';
 @import 'helpers/general';
+@import 'helpers/shortcuts';
 @import 'helpers/bem';
 @import 'helpers/inputs';
+@import 'helpers/image';
 @import 'helpers/mq';
 @import 'helpers/font';
+@import 'helpers/gradients';
 
 @mixin opacity($opacity) {
     opacity: $opacity;

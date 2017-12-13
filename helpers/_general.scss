@@ -32,3 +32,35 @@
         display: none;
     }
 }
+
+@mixin pull-left {
+    float: left;
+}
+
+@mixin pull-right {
+    float: right;
+}
+
+/// removes the focus ring around an element when a mouse input is detected
+@mixin disable-mouse-outline {
+    outline: 0;
+}
+
+/// generate classes
+@mixin generate-util-classes {
+    .clearfix {
+        @include clearfix;
+    }
+
+    .disable-mouse-outline {
+        @include disable-mouse-outline;
+    }
+
+    .pull-left {
+        @include pull-left;
+    }
+
+    .pull-right {
+        @include pull-right;
+    }
+}
