@@ -1,16 +1,16 @@
-/*
-    Sass helpers
-    Author: J.W. Lagendijk <jelte.lagendijk@mendix.com>
-    Repository: {{{ repository }}}
-    Version: {{{ version }}}
-    Release URL: {{{ url }}}
-*/
+//
+//    Sass helpers
+//    Author: J.W. Lagendijk <jelte.lagendijk@mendix.com>
+//    Repository: {{{ repository }}}
+//    Version: {{{ version }}}
+//    Release URL: {{{ url }}}
+//
 
-@import "helpers/general";
-@import "helpers/bem";
-@import "helpers/inputs";
-@import "helpers/mq";
-@import "helpers/font";
+@import 'helpers/general';
+@import 'helpers/bem';
+@import 'helpers/inputs';
+@import 'helpers/mq';
+@import 'helpers/font';
 
 @mixin opacity($opacity) {
     opacity: $opacity;
@@ -21,8 +21,7 @@
 @mixin box-shadow($vars, $inset: false) {
     @if $inset {
         @include prefix('box-shadow', inset $vars, webkit moz);
-    }
-    @else {
+    } @else {
         @include prefix('box-shadow', $vars, webkit moz);
     }
 }
@@ -35,11 +34,5 @@
 @mixin border-radius($radius) {
     @include prefix('border-radius', $radius);
     background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */
-}
-
-@mixin opacity($opacity) {
-    opacity: $opacity;
-    $opacity-ie: $opacity * 100;
-    filter: alpha(opacity=$opacity-ie); //IE8
+    // stops bg color from leaking outside the border
 }

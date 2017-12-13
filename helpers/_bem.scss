@@ -12,8 +12,7 @@
         #{$root}__#{$element} {
             @content;
         }
-    }
-    @else {
+    } @else {
         &__#{$element} {
             @content;
         }
@@ -28,8 +27,7 @@
         #{$root}--#{$modifier} {
             @content;
         }
-    }
-    @else {
+    } @else {
         &--#{$modifier} {
             @content;
         }
