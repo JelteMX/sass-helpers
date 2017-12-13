@@ -1,0 +1,23 @@
+{
+  "name": "sass-helpers",
+  "version": "1.0.0",
+  "description": "Sass helpers I use a lot in various projects. Just use whatever you need or import the whole repository in your Sass project.",
+  "main": "index.js",
+  "scripts": {
+    "build": "node make.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JelteMX/sass-helpers.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JelteMX/sass-helpers/issues"
+  },
+  "homepage": "https://github.com/JelteMX/sass-helpers#readme",
+  "devDependencies": {
+    "archiver": "^2.1.0",
+    "shelljs": "^0.7.8"
+  }
+}
