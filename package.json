@@ -1,11 +1,11 @@
 {
   "name": "sass-helpers",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Sass helpers I use a lot in various projects. Just use whatever you need or import the whole repository in your Sass project.",
   "main": "index.js",
   "scripts": {
     "build": "node make.js",
-    "doc": "sassdoc .",
+    "doc": "sassdoc helpers/",
     "lint": "node ./node_modules/.bin/sass-lint -c '.sass-lint.yml' '**/*.scss' -v -q"
   },
   "repository": {

@@ -1,3 +1,5 @@
+/// @group Gradient
+
 @mixin linear-gradient ($from, $to) {
     background-color: $from;
     background-image: -webkit-linear-gradient(top, $from, $to); // Chrome 10-25, iOS 5+, Safari 5.1+

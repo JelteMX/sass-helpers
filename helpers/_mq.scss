@@ -1,3 +1,5 @@
+/// @group Media Query
+
 @mixin mq($width, $type: min) {
     @if map_has_key($breakpoints, $width) { // sass-lint:disable-line function-name-format
         $width: map_get($breakpoints, $width); // sass-lint:disable-line function-name-format

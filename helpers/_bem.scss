@@ -1,3 +1,5 @@
+/// @group BEM
+
 @mixin block($element) {
     .#{$element} {
         @content;
