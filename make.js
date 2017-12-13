@@ -3,6 +3,10 @@ require('shelljs/make');
 const archiver = require('archiver');
 const fs = require('fs');
 const path = require('path');
+const Mustache = require("mustache");
+const pkg = require('./package.json');
+
+const repository = 'https://github.com/JelteMX/sass-helpers/';
 
 function createPackage(distname) {
     mkdir("-p", "dist");
@@ -23,9 +27,17 @@ function createPackage(distname) {
     return archive;
 }
 
-const archive = createPackage('helpers');
+const config = {
+    repository,
+    version: pkg.version,
+    url: repository + 'releases/tag/' + pkg.version
+};
 
-archive.append(fs.createReadStream(`${__dirname}/_helpers.scss`), { name: '_helpers.scss' });
+const archive = createPackage('helpers');
+const mainFile = fs.readFileSync(`${__dirname}/_helper.scss`, { encoding: "utf8" });
+const renderedFile = Mustache.render(mainFile, config);
+
+archive.append(renderedFile, { name: '_helper.scss' });
 
 archive.directory('helpers/', 'helpers');
 

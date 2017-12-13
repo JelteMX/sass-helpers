@@ -18,6 +18,7 @@
   "homepage": "https://github.com/JelteMX/sass-helpers#readme",
   "devDependencies": {
     "archiver": "^2.1.0",
+    "mustache": "^2.3.0",
     "shelljs": "^0.7.8"
   }
 }
